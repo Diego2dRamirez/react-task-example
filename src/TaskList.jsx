@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { tasks as data } from "./tasks";
 
-function TaskList(){
-    const [ tasks, setTasks] = useState([]);
 
-    // cargar el componente
-    useEffect(() =>{
-        setTasks(data)
-    }, []);
+function TaskList({tasks}){
 
-    if( tasks.length === 0 ){
+    if(tasks.length === 0 ){
         return <h1>No hay Tareas Aun</h1>
     }
 

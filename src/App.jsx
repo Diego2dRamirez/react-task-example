@@ -23,11 +23,15 @@ function App() {
 
   };
 
+  function deleteTask(taskId){
+    setTasks( tasks.filter(task => task.id !== taskId) )
+  }
+
   return (
     <React.Fragment>
       
       < TaskForm  createTask={createTask}/>
-      < TaskList tasks={tasks} />
+      < TaskList tasks={tasks} deleteTask={deleteTask}/>
 
     </React.Fragment>
   )

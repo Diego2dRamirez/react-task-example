@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { TaskCard } from "./TaskCard";
+import { TaskContext } from "../context/TaskContext";
 
 
-function TaskList({tasks, deleteTask}){
+function TaskList(){
+
+  const { tasks, deleteTask } = useContext(TaskContext)
 
     if(tasks.length === 0 ){
         return <h1>No hay Tareas Aun</h1>

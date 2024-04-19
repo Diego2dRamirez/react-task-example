@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { TaskContext } from "../context/TaskContext";
 
-function TaskForm({ createTask }) {
+function TaskForm() {
+  const { createTask } = useContext(TaskContext);
 
   const [title, setTitle] = useState("");
   const [descripcion, setDescripcion] = useState("");

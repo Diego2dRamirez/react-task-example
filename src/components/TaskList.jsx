@@ -8,11 +8,13 @@ function TaskList(){
   const { tasks, deleteTask } = useContext(TaskContext)
 
     if(tasks.length === 0 ){
-        return <h1>No hay Tareas Aun</h1>
+        return <h2 className="text-3xl text-teal-500 font-extrabold tracking-widest capitalize">No hay 
+        tareas aún</h2>
+
     }
 
     return( 
-        <div>
+        <div className="grid grid-cols-4 gap-4">
            {tasks.map((task) => (
             <TaskCard  key={task.id} task={task} deleteTask={deleteTask}/>
            ))}

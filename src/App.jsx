@@ -4,16 +4,15 @@ import { TaskList } from "./components/TaskList";
 
 
 function App() {
-
-
-
   return (
-    <React.Fragment>
-     
+    <main className="bg-zinc-600 min-h-screen">
+     <div className="container mx-auto p-4">
       <TaskForm/>
       <TaskList/>
 
-    </React.Fragment>
+     </div>
+
+    </main>
   )
 }
 
